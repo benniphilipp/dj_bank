@@ -173,7 +173,7 @@ module.exports = {
 ```
 
 
-### 10. Babel Config (.babelrc)
+#### 10. Babel Config (.babelrc)
 ```
 {
     "presets": ["@babel/preset-env", "@babel/preset-react"]
@@ -181,7 +181,7 @@ module.exports = {
 ```
 
 
-##### 11. Node-Pakete installieren
+#### 11. Node-Pakete installieren
 ```
 npm install \
   react react-dom react-router-dom bootstrap axios \
@@ -191,7 +191,7 @@ npm install \
 ```
 
 
-##### 12. Django Migrations
+#### 12. Django Migrations
 ```
 python3 manage.py makemigrations
 python3 manage.py migrate
