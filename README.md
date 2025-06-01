@@ -21,6 +21,8 @@
 #### 1. Virtuelle Umgebung
 ```
 python3.12 -m venv env
+```
+```
 source env/bin/activate
 ```
 
@@ -111,14 +113,14 @@ MIDDLEWARE = [
 #### Templates (Auszug)
 ```
 import os
+```
+```
 'DIRS': [os.path.join(BASE_DIR, 'templates')],
 ```
 
 
 #### 7. Beispiel-Template (templates/base.html)
 ``` 
-- templates
-
 <!-- templates/base.html -->
 {% load render_bundle from webpack_loader %}
 <!DOCTYPE html>
@@ -139,7 +141,8 @@ import os
 ```
 from django.views.generic import TemplateView
 from django.urls import path, re_path
-
+```
+```
 re_path(r"^(?!api/).*", TemplateView.as_view(template_name="base.html")),
 ```
 
@@ -282,7 +285,7 @@ git remote add origin https://github.com/Ben/new-repo.git
 ```
 
 
-##### Änderungen committen und pushen
+#### Änderungen committen und pushen
 ```
 git add .
 ```
