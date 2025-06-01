@@ -49,18 +49,24 @@ python manage.py startapp users
 ```
 # Application definition
 INSTALLED_APPS = [
-    'django.contrib.sites', # Neu
+    'django.contrib.sites',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
 
-    'rest_framework', # Neu
-    'rest_framework.authtoken', # Neu
-    'dj_rest_auth.registration', # Neu
-    'dj_rest_auth', # Neu
+    'rest_framework',               # Neu
+    'rest_framework.authtoken',     # Neu
+    'dj_rest_auth.registration',    # Neu
+    'dj_rest_auth',
 
-    'allauth', # Neu
-    'allauth.account', # Neu 
-    'allauth.socialaccount', # Neu
+    'allauth',                      # Neu
+    'allauth.account',              # Neu 
+    'allauth.socialaccount',        # Neu
 
-    'webpack_loader', # Neu
+    'webpack_loader',               # Neu
 
     # eigene Apps
     'users',
@@ -106,12 +112,6 @@ MIDDLEWARE = [
 ```
 import os
 'DIRS': [os.path.join(BASE_DIR, 'templates')],
-```
-
-
-#### 
-```
-python3 manage.py createsuperuser
 ```
 
 
@@ -178,6 +178,36 @@ module.exports = {
 };
 ```
 
+#### package.json
+```
+{
+    "name": "frontend",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "webpack --mode development --watch",
+        "build": "webpack --mode production"
+    },
+    "dependencies": {
+        "axios": "^1.9.0",
+        "bootstrap": "^5.3.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-router-dom": "^7.6.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.0.0",
+        "@babel/preset-env": "^7.0.0",
+        "@babel/preset-react": "^7.27.1",
+        "babel-loader": "^8.0.0",
+        "css-loader": "^7.1.2",
+        "style-loader": "^4.0.0",
+        "webpack": "^5.0.0",
+        "webpack-bundle-tracker": "^1.0.0",
+        "webpack-cli": "^4.0.0",
+        "webpack-dev-server": "^4.15.0"
+    }
+}
+```
 
 #### 10. Babel Config (.babelrc)
 ```
@@ -200,7 +230,18 @@ npm install \
 #### 12. Django Migrations
 ```
 python3 manage.py makemigrations
+```
+
+```
 python3 manage.py migrate
+```
+
+```
+python3 manage.py createsuperuser
+```
+
+```
+python3 manage.py runserver
 ```
 
 
@@ -208,7 +249,9 @@ python3 manage.py migrate
 ```
 # Entwicklung (watch)
 npm run dev
+```
 
+```
 # Produktion
 npm run build
 ```
@@ -221,4 +264,31 @@ npm run build
 #### Git Clone
 ```
 git clone git@github.com:benniphilipp/dj_bank.git <neuer_name>
+```
+
+
+#### Verbindung zum alten Remote entfernen 
+```
+git remote remove origin
+```
+
+``` 
+rm -rf .git
+```
+
+#### Neues Remote hinzufügen
+```
+git remote add origin https://github.com/Ben/new-repo.git
+```
+
+
+##### Änderungen committen und pushen
+```
+git add .
+```
+```
+git commit -m "Initial commit"
+```
+```
+git push -u origin main
 ```
