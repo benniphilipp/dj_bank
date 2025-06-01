@@ -1,5 +1,6 @@
 # dj_bank
 
+```bash
 ├── backend/
 │   ├── static/
 │   │   ├── dist/
@@ -14,6 +15,7 @@
 │   │   └── index.js
 │   ├── .babelrc
 │   └── webpack.config.js
+```
 
 # Files
 - .env
