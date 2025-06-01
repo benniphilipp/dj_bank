@@ -17,15 +17,13 @@
 │   └── webpack.config.js
 ```
 
-# Files
-- .env
-- webpack.config.js
 
 #### 1. Virtuelle Umgebung
 ```
 python3.12 -m venv env
 source env/bin/activate
 ```
+
 
 #### 2. Requirements installieren
 ```
@@ -34,15 +32,18 @@ pip install -r requirements.txt
 
 - (Wenn du noch keine requirements.txt hast, installiere erst die Pakete und mach dann pip freeze > requirements.txt.)
 
+
 ##### 3. Django-Projekt erstellen
 ```
 django-admin startproject <project_name> .
 ```
 
+
 #### 4. App erstellen
 ```
 python manage.py startapp users
 ```
+
 
 #### 5. Einstellungen (settings.py)
 ```
@@ -66,6 +67,7 @@ INSTALLED_APPS = [
 ]
 ```
 
+
 #### Webpack Loader
 ```
 WEBPACK_LOADER = {
@@ -79,6 +81,7 @@ WEBPACK_LOADER = {
     }
 }
 ```
+
 
 #### Static Files
 ```
@@ -98,16 +101,19 @@ MIDDLEWARE = [
 ]
 ```
 
+
 #### Templates (Auszug)
 ```
 import os
 'DIRS': [os.path.join(BASE_DIR, 'templates')],
 ```
 
+
 #### 
 ```
 python3 manage.py createsuperuser
 ```
+
 
 #### 7. Beispiel-Template (templates/base.html)
 ``` 
