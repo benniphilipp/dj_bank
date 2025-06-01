@@ -218,4 +218,7 @@ npm run build
 - https://docs.allauth.org/en/latest/
 
 
-
+#### Git Clone
+```
+git clone git@github.com:benniphilipp/dj_bank.git <neuer_name>
+```
